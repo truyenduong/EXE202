@@ -1,0 +1,116 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-mint: var(--mint);
+  --color-mint-foreground: var(--mint-foreground);
+  --color-sky: var(--sky);
+  --color-sky-foreground: var(--sky-foreground);
+}
+
+:root {
+  --radius: 0.9rem;
+
+  /* Palette: mint green, sky blue, white, soft gray */
+  --background: oklch(0.995 0.005 180);
+  --foreground: oklch(0.22 0.03 200);
+
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.22 0.03 200);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.22 0.03 200);
+
+  /* Primary: fresh mint green */
+  --primary: oklch(0.72 0.14 165);
+  --primary-foreground: oklch(0.99 0.01 165);
+
+  /* Secondary: soft sky blue */
+  --secondary: oklch(0.94 0.03 220);
+  --secondary-foreground: oklch(0.3 0.06 230);
+
+  --muted: oklch(0.965 0.008 210);
+  --muted-foreground: oklch(0.5 0.02 220);
+
+  --accent: oklch(0.93 0.05 175);
+  --accent-foreground: oklch(0.28 0.06 190);
+
+  --destructive: oklch(0.6 0.22 27);
+  --destructive-foreground: oklch(0.99 0.01 0);
+
+  --border: oklch(0.92 0.01 210);
+  --input: oklch(0.92 0.01 210);
+  --ring: oklch(0.72 0.14 165);
+
+  --mint: oklch(0.88 0.08 165);
+  --mint-foreground: oklch(0.28 0.08 170);
+  --sky: oklch(0.88 0.06 230);
+  --sky-foreground: oklch(0.3 0.08 235);
+
+  --gradient-hero: linear-gradient(135deg, oklch(0.96 0.05 175) 0%, oklch(0.94 0.05 220) 100%);
+  --gradient-soft: linear-gradient(180deg, oklch(0.99 0.01 180) 0%, oklch(0.96 0.03 200) 100%);
+  --shadow-soft: 0 10px 40px -20px oklch(0.6 0.12 200 / 0.25);
+  --shadow-card: 0 4px 20px -8px oklch(0.6 0.08 200 / 0.15);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+  html, body {
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+  }
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+  }
+}
+
+@utility bg-gradient-hero {
+  background: var(--gradient-hero);
+}
+@utility bg-gradient-soft {
+  background: var(--gradient-soft);
+}
+@utility shadow-soft {
+  box-shadow: var(--shadow-soft);
+}
+@utility shadow-card {
+  box-shadow: var(--shadow-card);
+}

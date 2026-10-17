@@ -1,0 +1,48 @@
+{
+  "version": "7",
+  "dialect": "postgresql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "7",
+      "when": 1789961791991,
+      "tag": "0000_create_auth_profiles_roles",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1790059409373,
+      "tag": "0001_harden_handle_new_user",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1790088717107,
+      "tag": "0002_create_bookings_flow",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "7",
+      "when": 1790088752221,
+      "tag": "0003_booking_photos_storage_policies",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "7",
+      "when": 1791795254421,
+      "tag": "0004_admin_view_all",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "7",
+      "when": 1791795254422,
+      "tag": "0005_simple_operations",
+      "breakpoints": true
+    }
+  ]
+}
