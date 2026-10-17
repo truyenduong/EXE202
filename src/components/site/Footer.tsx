@@ -1,6 +1,5 @@
 import { Link } from "@tanstack/react-router";
 import { Phone, Mail, MapPin } from "lucide-react";
-import logoAsset from "@/assets/cleanlink-logo.jpg.asset.json";
 
 export function Footer() {
   return (
@@ -9,10 +8,11 @@ export function Footer() {
         <div className="space-y-3">
           <div className="flex items-center gap-2">
             <img
-              src={logoAsset.url}
-              alt="CleanLink"
-              className="h-10 w-auto rounded-lg object-cover"
+              src="/favicon.png"
+              alt=""
+              className="h-9 w-9 rounded-lg object-cover"
             />
+            <span className="text-lg font-bold tracking-tight text-foreground">CleanLink</span>
           </div>
           <p className="text-sm text-muted-foreground max-w-xs">
             CleanLink là nền tảng kết nối chủ cơ sở lưu trú với người dọn tại Quy Nhơn.
