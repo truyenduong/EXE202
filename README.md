@@ -46,9 +46,10 @@ tracked manually; no payment gateway is connected.
 ## Deploying from GitHub
 
 The root [`render.yaml`](./render.yaml) configures a Render Node web service
-that deploys commits pushed to `main`. Create a Render Blueprint from this
-repository, provide the four Supabase environment variable values when
-prompted, and sync the Blueprint. Render free web services may sleep when idle.
+that builds with Nitro's `node_server` preset and deploys commits pushed to
+`main`. Create a Render Blueprint from this repository, provide the four
+Supabase environment variable values when prompted, and sync the Blueprint.
+Render free web services may sleep when idle.
 
 Import the same GitHub repository into Vercel. The root [`vercel.json`](./vercel.json)
 builds with Nitro's Vercel preset. Add the same four Supabase variables to the

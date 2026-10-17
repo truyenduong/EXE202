@@ -5,7 +5,7 @@ services:
     plan: free
     branch: main
     autoDeployTrigger: commit
-    buildCommand: bun install --frozen-lockfile && bun run build
+    buildCommand: bun install --frozen-lockfile && NITRO_PRESET=node_server bun run build
     startCommand: node .output/server/index.mjs
     healthCheckPath: /
     envVars:
